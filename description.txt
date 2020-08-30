@@ -1,0 +1,20 @@
+Its a quite easy programm the procer thread uses its function to generate packages of randomly slightly off the given measurements and put it into the queue. 
+After that he informs the consumer that he has made a new package and waits 1 second until he starts to make a new one. 
+
+The consumer has a 6 seconds Delay to start to represent the "Transportation Time". 
+After the Consumer gets informed about a new package in the queue, he reads it check the measeaurments and 
+if its in the allowed criteria (he is more precise on that as the producer) he discardes the package or label it.
+
+A complete log is provided in the Console, so you can see what is happenening when, all entries are provided with timestamps, 
+name of thread who send them, Id and meseaurment of the package and why they're discard. 
+
+
+compile and run commands
+
+Windows
+g++ -o espera.exe espera.cpp
+espera.exe 
+
+Linux 
+g++ -pthread -o espera espera.cpp
+./a.out
